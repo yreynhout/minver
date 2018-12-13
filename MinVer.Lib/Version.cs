@@ -13,11 +13,11 @@ namespace MinVer.Lib
         private readonly int height;
         private readonly string buildMetadata;
 
-        public Version(IEnumerable<string> defaultPreReleaseIdentifiers) : this(default, default, defaultPreReleaseIdentifiers) { }
+        public Version(IEnumerable<string> preReleaseIdentifiers) : this(default, default, preReleaseIdentifiers) { }
 
-        public Version(int major, int minor, IEnumerable<string> defaultPreReleaseIdentifiers) : this(major, minor, default, defaultPreReleaseIdentifiers, default, default) { }
+        public Version(int major, int minor, IEnumerable<string> preReleaseIdentifiers) : this(major, minor, default, preReleaseIdentifiers, default, default) { }
 
-        public Version(int major, int minor, string buildMetadata, IEnumerable<string> defaultPreReleaseIdentifiers) : this(major, minor, default, defaultPreReleaseIdentifiers, default, buildMetadata) { }
+        public Version(int major, int minor, string buildMetadata, IEnumerable<string> preReleaseIdentifiers) : this(major, minor, default, preReleaseIdentifiers, default, buildMetadata) { }
 
         private Version(int major, int minor, int patch, IEnumerable<string> preReleaseIdentifiers, int height, string buildMetadata)
         {
